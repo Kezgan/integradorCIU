@@ -1,0 +1,83 @@
+body {
+    background-color: #E5E5E5;
+    font-family: 'Roboto', sans-serif;
+}
+
+#fondoBlanco {
+    background-color: white;
+    width: auto;
+    height: 5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#fondoBlanco #logo {
+    position: absolute;
+    width: 55px;
+    top: 12%;
+    left: 2%;
+}
+
+#fondoBlanco h1 {
+    font-size: 22px;
+    position: absolute;
+    top: 22px;
+    left: 110px;
+}
+
+#fondoGris {
+    position: absolute;
+    top: 15%;
+    left: 25px;
+    right: 0;
+}
+
+#fondoGris #textoHome p {
+    color: white;
+    font-size: 22px;
+}
+
+#fondoGris #rectangle{
+    background-color: #32AC71;
+    position: absolute;
+    width: 370px;
+    height: 275px;
+    border-radius: 20px;
+    border: 1px solid #1D935A;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#fondoGris #rectangle1{
+    background-color: #0277BD;
+    position: absolute;
+    margin: 0 auto;
+    margin-left: 470px;
+    width: 370px;
+    height: 275px;
+    border-radius: 20px;
+    border: 1px solid #0E679C;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#fondoGris #rectangle2{
+    background-color: #FAA723;
+    position: absolute;
+    margin: auto;
+    margin-left: 945px;
+    width: 370px;
+    height: 275px;
+    border-radius: 20px;
+    border: 1px solid #D69632;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
