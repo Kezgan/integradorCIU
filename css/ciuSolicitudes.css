@@ -3,6 +3,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+
 #fondoBlanco {
     background-color: white;
     width: auto;
@@ -34,6 +35,23 @@ body {
     right: 0;
 }
 
+#sidebar , #sidebar2 {
+    background-color: lawngreen;
+    float: left;
+    width: 20%;
+}
+
+#interfazSolicitudes {
+    float: left;
+    width: 60%;
+    background-color: lightcoral;
+}
+
+@media screen and (max-width: 1000px) {
+    #sidebar , #sidebar2 , #interfazSolicitudes {
+        width: 100%;
+    }
+}
 
 #bracketTitulo {
     background-color: #FAA723;
@@ -69,4 +87,11 @@ body {
     width: 6.875em;
     bottom: 12.500em;
     right: 26.250em;
+}
+
+#bracketHistorial {
+    position: absolute;
+    background-color: turquoise;
+    left: 300px;
+    margin: 0 auto;
 }
