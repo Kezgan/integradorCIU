@@ -56,9 +56,9 @@ body {
     font-size: inherit;
     width: 37.050em;
     height: 7.0em;
-    margin-top: 20px;
-    margin-left: 354px;
-    padding: 20px;
+    margin-top: 1.250em;
+    margin-left: 22.125em;
+    padding: 1.250em;
     border-radius: 10px;
     border: 2px solid #ccc;
     resize: none;
@@ -66,7 +66,7 @@ body {
 
 #icon {
     position: absolute;
-    width: 110px;
-    bottom: 200px;
-    right: 420px;
+    width: 6.875em;
+    bottom: 12.500em;
+    right: 26.250em;
 }
