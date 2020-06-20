@@ -2,47 +2,86 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title>Mis Solicitudes</title>
         <link rel="stylesheet" href="css/ciuSolicitudes.css" type="text/css">
     </head>
     <body>
-        <div id="fondoBlanco">
-            <img id="logo" src="images/unahur-logo.png">
-            <h1>Orientación y Acompañamiento</h1>
-        </div>
+        <div id="contenedor">
 
-        <div id="fondoGris">
-            <h2>Mis Solicitudes</h2>
+            <header>
+                <img id="logo" src="images/unahur-logo.png">
+                <span id="titulo"><b>Orientación y Acompañamiento</b></span>
+                <div id="seleccionar">
+                    <a href="ciuSolicitudes.html"></a>
+                    <a href="ciuUsuarios"></a>
+                </div>         
+            </header>
 
-            <div id="sidebar">
-                <p>Editar solicitud</p>
-            </div>
-
-            <div id="interfazSolicitudes">
-
-                <div id="bracketTitulo">
-                    <p><b>Contruccion de Interfaces <br> de Usuario</b></p>
-                    <p id="profesor">Gabriel Molina</p>
-                    <!--<img id="icon" src="images/icon.png">-->
+            <div id="main">
+                <div id="materia">
+                    <div id="contenidoMateria">
+                        <p><b>Contrucción de Interfaces <br> de Usuario</b></p>
+                        <p id="profesor">Gabriel Molina</p>
+                    </div>
                 </div>
 
-                <div id="bracketPost">
-                    <form>
-                        <textarea name="post" id="post" placeholder="Escribe tu consulta aquí..."></textarea>
-                    </form>
+                <div id="post">
+                    <textarea name="postTextArea" placeholder="Escribe tu consulta aquí..."></textarea>
+                    <hr>
+                    <div id="botones">
+                        <button class="btn" id="bEnviar">
+                            Enviar
+                        </button>
+                        <button class="btn" id="bCancelar">
+                            Cancelar
+                        </button>
+                    </div>
                 </div>
-
-                <div id="bracketHistorial">
-                    <p><b>Historial</b></p>
-                </div>
-
             </div>
 
-            <div id="sidebar2">
-                <p>Hola, soy otra sidebar</p>
+
+
+
+
+        <!--
+            <div id="fondoBlanco">
+                <img id="logo" src="images/unahur-logo.png">
+                <h1>Orientación y Acompañamiento</h1>
             </div>
 
+            <div id="fondoGris">
+                <h2>Mis Solicitudes</h2>
+
+                <div id="sidebar">
+                    <p>Editar solicitud</p>
+                </div>
+
+                <div id="interfazSolicitudes">
+
+                    <div id="bracketTitulo">
+                        <p><b>Contruccion de Interfaces <br> de Usuario</b></p>
+                        <p id="profesor">Gabriel Molina</p>
+                        <img id="icon" src="images/icon.png">
+                    </div>
+
+                    <div id="bracketPost">
+                        <form>
+                            <textarea name="post" id="post" placeholder="Escribe tu consulta aquí..."></textarea>
+                        </form>
+                    </div>
+
+                    <div id="bracketHistorial">
+                        <p><b>Historial</b></p>
+                    </div>
+
+                </div>
+
+                <div id="sidebar2">
+                    <p>Hola, soy otra sidebar</p>
+                </div>
+            -->
+            </div>
         </div>
     </body>
 </html>
