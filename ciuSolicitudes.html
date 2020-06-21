@@ -14,10 +14,11 @@
                     <a href="home.html"><img id="logo" src="images/unahur-logo.png"></a>
                     <span id="titulo"><b>Orientación y Acompañamiento</b></span>
                 </div>
+                
                 <div id="seleccionar">
-                    <ul>
-                        <li><a href="ciuSolicitudes.html" class="links" id="solicitudes">Solicitudes</a></li>
-                        <li><a href="ciuUsuarios" class="links" id="usuarios">Usuarios</a></li>
+                    <ul id="ulSeleccionar">
+                        <li class="liSeleccionar"><a href="ciuSolicitudes.html" class="links" id="solicitudes">Solicitudes</a></li>
+                        <li class="liSeleccionar"><a href="ciuUsuarios" class="links" id="usuarios">Usuarios</a></li>
                     </ul>
                 </div>  
                 <div id="extra">
@@ -26,12 +27,30 @@
             </header>
 
             <div id="main">
+
                 <div id="materia">
                     <div id="contenidoMateria">
                         <p><b>Contrucción de Interfaces <br> de Usuario</b></p>
                         <p id="profesor">Gabriel Molina</p>
                     </div>
                 </div>
+
+                <aside>
+                    <div id="opciones">
+                        <ul id="ulOpciones">
+                            <li class="liOpciones">
+                                <button class="btn" id="bEditar">
+                                    Editar
+                                </button>
+                            </li>
+                            <li class="liOpciones">
+                                <button class="btn" id="bEliminar">
+                                    Eliminar
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
 
                 <div id="post">
                     <textarea name="postTextArea" placeholder="Escribe tu consulta aquí..."></textarea>
@@ -45,50 +64,17 @@
                         </button>
                     </div>
                 </div>
-            </div>
 
+                <hr id="division">
 
+                <div id="pHistorial">Historial</div>
 
-
-
-        <!--
-            <div id="fondoBlanco">
-                <img id="logo" src="images/unahur-logo.png">
-                <h1>Orientación y Acompañamiento</h1>
-            </div>
-
-            <div id="fondoGris">
-                <h2>Mis Solicitudes</h2>
-
-                <div id="sidebar">
-                    <p>Editar solicitud</p>
+                <div id="historial">
+                    
                 </div>
 
-                <div id="interfazSolicitudes">
-
-                    <div id="bracketTitulo">
-                        <p><b>Contruccion de Interfaces <br> de Usuario</b></p>
-                        <p id="profesor">Gabriel Molina</p>
-                        <img id="icon" src="images/icon.png">
-                    </div>
-
-                    <div id="bracketPost">
-                        <form>
-                            <textarea name="post" id="post" placeholder="Escribe tu consulta aquí..."></textarea>
-                        </form>
-                    </div>
-
-                    <div id="bracketHistorial">
-                        <p><b>Historial</b></p>
-                    </div>
-
-                </div>
-
-                <div id="sidebar2">
-                    <p>Hola, soy otra sidebar</p>
-                </div>
-            -->
             </div>
+
         </div>
     </body>
 </html>

@@ -51,17 +51,17 @@ header #seleccionar {
     float: left;
 }
 
-header #seleccionar ul {
+header #seleccionar #ulSeleccionar {
     list-style: none;
     width: 100%;
 }
 
-header #seleccionar ul li {
+header #seleccionar #ulSeleccionar .liSeleccionar {
     display: inline-block;
     text-align: center;
 }
 
-header #seleccionar ul li .links {
+header #seleccionar #ulSeleccionar .liSeleccionar .links {
     color: #686868;
     font-size: 0.8rem;
     text-decoration: none;
@@ -69,12 +69,12 @@ header #seleccionar ul li .links {
     padding: 29px 15px;
 }
 
-header #seleccionar ul li .links:hover {
+header #seleccionar #ulSeleccionar .liSeleccionar .links:hover {
     background-color: #83838330;
-    border-bottom: 2px solid #83838330;
+    border-bottom: 2px solid #83838301;
 }
 
-header #seleccionar ul li #solicitudes {
+header #seleccionar #ulSeleccionar .liSeleccionar #solicitudes {
     color: #000;
     border-bottom: 2px solid #009673;
 }
@@ -107,6 +107,47 @@ header #extra {
 #main #materia #contenidoMateria #profesor {
     font-size: 18px;
     padding-top: 1rem;
+}
+
+#main #opciones {
+    background-color: rgba(34, 34, 58, 0.7);
+    position:fixed;
+    width: 15%;
+    height: 120px;
+    margin: 0% auto;
+    border-radius: 10px;
+}
+
+#main #opciones #ulOpciones {
+    list-style: none;
+}
+
+#main #opciones #ulOpciones .liOpciones {
+    display: block;
+    text-align: center;
+}
+
+#main #opciones #ulOpciones .liOpciones .btn {
+    width: 50%;
+    border-radius: 5px;
+    border: none;
+    background-color: inherit;
+    margin: 10px 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+}
+
+#main #opciones #ulOpciones .liOpciones #bEditar {
+    color: white;
+    border: 1px solid white;
+}
+
+#main #opciones #ulOpciones .liOpciones #bEliminar {
+    background-color: #f44336;
+    color: white;
 }
 
 #main #post {
@@ -165,94 +206,21 @@ header #extra {
     /*border: 0.1px solid #00000050;*/
 }
 
-/*#fondoBlanco {
+#main #division {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#main #pHistorial {
+    font-size: 0.9rem;
+    width: 45%;
+    margin: 20px auto;
+}
+
+#main #historial {
     background-color: white;
-    width: auto;
-    height: 5em;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
-#fondoBlanco #logo {
-    position: absolute;
-    width: 55px;
-    top: 12%;
-    left: 2%;
-}
-
-#fondoBlanco h1 {
-    font-size: 22px;
-    position: absolute;
-    top: 22px;
-    left: 110px;
-}
-
-#fondoGris {
-    position: absolute;
-    top: 15%;
-    left: 25px;
-    right: 0;
-}
-
-#sidebar , #sidebar2 {
-    background-color: lawngreen;
-    float: left;
-    width: 20%;
-}
-
-#interfazSolicitudes {
-    float: left;
-    width: 60%;
-    background-color: lightcoral;
-}
-
-@media screen and (max-width: 1000px) {
-    #sidebar , #sidebar2 , #interfazSolicitudes {
-        width: 100%;
-    }
-}
-
-#bracketTitulo {
-    background-color: #FAA723;
-    width: 40.125em;
-    height: 9.125em;
-    margin: 0 auto;
+    width: 45%;
+    height: 6.5rem;
+    margin: 20px auto;
     border-radius: 10px;
-    border: 2px solid #D69632;
 }
-
-#bracketTitulo p {
-    color: white;
-    font-size: 22px;
-    padding-top: 2px;
-    padding-left: 30px;
-}
-
-#post {
-    font-family: inherit;
-    font-size: inherit;
-    width: 37.050em;
-    height: 7.0em;
-    margin-top: 1.250em;
-    margin-left: 22.125em;
-    padding: 1.250em;
-    border-radius: 10px;
-    border: 2px solid #ccc;
-    resize: none;
-}
-
-#icon {
-    position: absolute;
-    width: 6.875em;
-    bottom: 12.500em;
-    right: 26.250em;
-}
-
-#bracketHistorial {
-    position: absolute;
-    background-color: turquoise;
-    left: 300px;
-    margin: 0 auto;
-}*/
