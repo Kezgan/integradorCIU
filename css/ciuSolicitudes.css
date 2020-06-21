@@ -22,19 +22,66 @@ header {
     background-color: white;
     width: 100%;
     height: 3.7rem;
-    padding-left: 1.5rem;
-    padding-top: 0.5rem;
 }
 
-header #logo {
+header #tl {
+    width: 40%;
+    height: 3.7em;
+    padding-left: 1.5rem;
+    padding-top: 0.5rem;
+    float: left;
+}
+
+header #tl #logo {
     width: 55px;
 }
 
-header #titulo {
+header #tl #titulo {
     position: relative;
     font-size: 1rem;
     top: -0.800rem;
     left: 20px;
+}
+
+header #seleccionar {
+    font-size: 1rem;
+    width: 20%;
+    height: 3.7em;
+    text-align: center;
+    float: left;
+}
+
+header #seleccionar ul {
+    list-style: none;
+    margin-top: 18px;
+    width: 100%;
+}
+
+header #seleccionar ul li {
+    display: inline-block;
+    text-align: center;
+}
+
+header #seleccionar ul li .links {
+    color: #000;
+    font-size: 0.8rem;
+    text-decoration: none;
+    display: block;
+    padding: 15px 15px 25px 15px;
+}
+
+header #seleccionar ul li .links:visited {
+    
+}
+
+header #seleccionar ul li #solicitudes {
+    border-bottom: 2px solid #009673
+}
+
+header #extra {
+    width: 40%;
+    height: 3.7em;
+    float: left;
 }
 
 #main {
@@ -47,6 +94,7 @@ header #titulo {
     width: 45%;
     height: 8rem;
     margin: 0 auto;
+    border: 1px solid #D69632;
     border-radius: 10px;
 }
 
@@ -63,9 +111,10 @@ header #titulo {
 #main #post {
     background-color: white;
     width: 45%;
-    height: 7rem;
+    height: 6.5rem;
     margin: 20px auto;
     border-radius: 10px;
+    /*border: 1px solid #83838350;*/
     box-shadow: 0px 1px 3px 1px #83838370;
 }
 
@@ -73,9 +122,9 @@ header #titulo {
     font-family: inherit;
     font-size: 0.81rem;
     width: 100%;
-    height: 4.5rem;
+    height: 4rem;
     margin: 0 auto;
-    padding: 18px 0px 0px 18px;
+    padding: 18px 18px 0px 18px;
     border-radius: 10px;
     border-style: none;
     outline: none;
@@ -111,7 +160,7 @@ header #titulo {
 
 #main #post #botones #bCancelar {
     color: #00000090;
-    border: 0.1px solid #00000050;
+    /*border: 0.1px solid #00000050;*/
 }
 
 /*#fondoBlanco {
