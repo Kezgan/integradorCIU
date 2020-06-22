@@ -14,6 +14,7 @@ body {
 
 #contenedor {
     width: 100%;
+    max-width: 1400px;
     margin: auto;
     overflow: hidden; /* cambiar valor en un futuro */
 }
@@ -87,6 +88,7 @@ header #extra {
 
 #main {
     width: 90%;
+    max-width: 1400px;
     margin: 30px auto;
 }
 
@@ -220,7 +222,14 @@ header #extra {
 #main #historial {
     background-color: white;
     width: 45%;
-    height: 6.5rem;
     margin: 20px auto;
+    border-radius: 10px;
+}
+
+#main #historial .contenedor {
+    background-color: indigo;
+    width: 100%;
+    height: 5rem;
+    padding: 18px 18px 0px 18px;
     border-radius: 10px;
 }
