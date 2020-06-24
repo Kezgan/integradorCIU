@@ -236,6 +236,11 @@ header #extra {
     width: 100%;
 }
 
+#main #cHistorial #tabla thead th {
+    background-color: #4CAF50;
+    color: white;
+  }
+
 #main #cHistorial #tabla #desc {
     width: 60%;
 }
@@ -245,7 +250,11 @@ header #extra {
 }
 
 #main #cHistorial #tabla #estado {
-    width: 20%;
+    width: 15%;
+}
+
+#main #cHistorial #tabla #selec {
+    width: 5%;
 }
 
 #main #cHistorial #historial {
@@ -253,7 +262,11 @@ header #extra {
     margin: 0px;
 }
 
-#main #cHistorial #historial .contenedor {
+#checkbox {
+    
+}
+
+#res {
     overflow-wrap: break-word;
     background-color: white;
     font-size: 0.81rem;
