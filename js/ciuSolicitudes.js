@@ -1,5 +1,6 @@
 var bEnviar = document.getElementById("bEnviar")
 var bEliminar = document.getElementById("bEliminar")
+var bEditar = document.getElementById("bEditar")
 
 const xhttp = new XMLHttpRequest();
 
@@ -74,7 +75,65 @@ function eliminarFila() {
     }
 }
 
+function editarFila() {
+    var table = document.getElementById("tabla").tBodies[0];
+    var rowCount = table.rows.length;
+    var flotante = document.getElementById("flotante")
+    var eDiv = document.createElement("DIV")
+    var bDiv = document.createElement("DIV")
+    var formulario = document.createElement("FORM")
+    var inputDesc = document.createElement("INPUT")
+    var inputFecha = document.createElement("INPUT")
+    var inputEstado = document.createElement("INPUT")
+
+    inputDesc.type = "text"
+    inputFecha.type = "text"
+    inputEstado.type = "text"
+    
+    for(var i=0; i<rowCount; i++) {
+        var row = table.rows[i];
+        var chkbox = row.cells[3].getElementsByTagName('input')[0];
+        var botonGuardar = document.createElement("button")
+        var botonCancelar = document.createElement("button")
+        
+        if(chkbox.checked == true) {
+            inputDesc.value = row.cells[0].innerHTML
+            inputFecha.value = row.cells[1].innerHTML
+            inputEstado.value = row.cells[2].innerHTML
+
+            formulario.appendChild(inputDesc)
+            formulario.appendChild(inputFecha)
+            formulario.appendChild(inputEstado)
+            eDiv.appendChild(formulario)
+            eDiv.classList = "eDiv"
+
+            botonGuardar.innerHTML = "Guardar"
+            botonCancelar.innerHTML = "Cancelar"
+
+            bDiv.appendChild(botonGuardar)
+            bDiv.appendChild(botonCancelar)
+            bDiv.classList = "bDiv"
+            flotante.appendChild(eDiv)
+            flotante.appendChild(bDiv)
+            
+            console.log("Hola")
+            break
+        }
+    }
+
+    function holis() {
+        row.cells[0].innerHTML = inputDesc.value
+        row.cells[1].innerHTML = inputFecha.value
+        row.cells[2].innerHTML = inputEstado.value
+    }
+    holis()
+    
+    /* Boton guardar deberia ser variable global */
+}
+
 
 
 bEnviar.addEventListener("click" , addDiv)
 bEliminar.addEventListener("click" , eliminarFila)
+bEditar.addEventListener("click" , editarFila)
+botonGuardar.addEventListener("click" , holis)

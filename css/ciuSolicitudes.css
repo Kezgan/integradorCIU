@@ -229,17 +229,28 @@ header #extra {
 #main #cHistorial {
     width: 45%;
     margin: 20px auto;
-    border-radius: 10px;
 }
 
 #main #cHistorial #tabla {
     width: 100%;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
 #main #cHistorial #tabla thead th {
-    background-color: #4CAF50;
+    background-color: #009673;
     color: white;
-  }
+}
+
+#main #cHistorial #tabla thead th, td {
+    padding: 18px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    font-size: 0.81rem;
+}
 
 #main #cHistorial #tabla #desc {
     width: 60%;
@@ -257,13 +268,15 @@ header #extra {
     width: 5%;
 }
 
+/*
 #main #cHistorial #historial {
     width: 55%;
     margin: 0px;
 }
+*/
 
 #checkbox {
-    
+    margin: 0 auto;
 }
 
 #res {
@@ -275,4 +288,21 @@ header #extra {
     padding: 18px 18px 18px 18px;
     border: 2px solid rgba(131, 131, 131, 0.3);
     border-radius: 10px;
+}
+
+
+#main #flotante {
+    background-color: lawngreen;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.eDiv {
+    width: 70%;
+    display: inline-block
+}
+
+.bDiv {
+    width: 30%;
+    display: inline-block;
 }
