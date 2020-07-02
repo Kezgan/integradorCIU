@@ -93,9 +93,10 @@ function addDiv() {
     console.log(contador)
     console.log(arrayDatos)
     contador++
-    
-    
-    /*textArea.value = ""*/
+    formNombre.value = ""
+    formContraseña.value = ""
+    formEmail.value = ""
+    formFecha.value = ""
 }
 
 function eliminarFila() {
