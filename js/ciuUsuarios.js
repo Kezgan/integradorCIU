@@ -10,7 +10,7 @@ var contador = 3
 var datosViejos = 2
 
 arrayDatos[0] = {
-    userContraseña: "tequierolauti98",
+    userContraseña: "sebastian98",
     userEmail: "sebamdo@gmail.com",
     userFecha: "1998-02-24",
     userNombre: "Sebastián Montes de Oca",
@@ -18,7 +18,7 @@ arrayDatos[0] = {
 }
 
 arrayDatos[1] = {
-    userContraseña: "tequieroseba98",
+    userContraseña: "lautaro98",
     userEmail: "lautaromc@gmail.com",
     userFecha: "1998-01-26",
     userNombre: "Lautaro Casella",
@@ -26,10 +26,10 @@ arrayDatos[1] = {
 }
 
 arrayDatos[2] = {
-    userContraseña: "tequieropinocho98",
-    userEmail: "pinocho4life@gmail.com",
-    userFecha: "1810-05-28",
-    userNombre: "Pepe Grillo",
+    userContraseña: "oneringtorulethemall",
+    userEmail: "mordor4life@gmail.com",
+    userFecha: "0001-01-01",
+    userNombre: "Sauron",
     userEstado: "No"
 }
 

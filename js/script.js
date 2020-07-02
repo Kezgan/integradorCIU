@@ -20,11 +20,10 @@ function logear() {
 
     if(verificarDNI(documentoValor) && verificarPassword(passwordValor)) {
         location.href = "home.html"
+
     } else {
         inputDNI.classList = "error"
         inputPassword.classList = "error"
-        setTimeout('inputDNI.classList = "datos"' , 3000)
-        setTimeout('inputPassword.classList = "datos"' , 3000)
         error.innerHTML = "Datos incorrectos, vuelva a ingresarlos."
     }
 }

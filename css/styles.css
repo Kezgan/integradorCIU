@@ -117,3 +117,8 @@ hr {
     margin: 0 auto;
     margin-top: 1.5%;
 }
+
+#error {
+    color: red;
+    text-align: center;
+}
