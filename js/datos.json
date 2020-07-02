@@ -1,17 +1,17 @@
 [
     {
         "descripcion": "Pedido de notebook",
-        "fechaSolicitud": "30/03/2020",
+        "fechaSolicitud": "2020-03-30",
         "estado": "Abierta"
     },
     {
         "descripcion": "Cambio de horario",
-        "fechaSolicitud": "03/04/2020",
+        "fechaSolicitud": "2020-04-03",
         "estado": "En progreso"
     },
     {
         "descripcion": "Pedido de una bicicleta para llegar a la universidad",
-        "fechaSolicitud": "12/05/2020",
+        "fechaSolicitud": "2020-05-12",
         "estado": "Cerrada"
     }
 ]

@@ -2,6 +2,9 @@ var bEnviar = document.getElementById("bEnviar")
 var bEliminar = document.getElementById("bEliminar")
 var bEditar = document.getElementById("bEditar")
 
+var btnG = document.getElementById("btnG")
+var btnC = document.getElementById("btnC")
+
 const xhttp = new XMLHttpRequest();
 
 xhttp.open("GET", "js/datos.json", true);
@@ -45,7 +48,7 @@ function addDiv() {
    res.innerHTML += `
         <tr>
             <td>${texto}</td>
-            <td>${fecha.getDate() + "/" + (fecha.getMonth()+1) + "/" + fecha.getFullYear()}</td>
+            <td>${fecha.getFullYear() + "-" + (fecha.getMonth()+1) + "-" + fecha.getDate()}</td>
             <td>Abierto</td>
             <td><input type="checkbox" id="checkbox" name="input"></input></td>
         </tr>
@@ -71,69 +74,82 @@ function eliminarFila() {
     }
     
     if(contador == 0) {
-        alert("No seleccionaste ninguna opcion")
+        setTimeout(function(){ alert("No seleccionaste ninguna opcion") } , 100)
+    } else {
+        setTimeout(function(){ alert("Eliminaste " + contador + " elementos") } , 100)
     }
 }
 
 function editarFila() {
     var table = document.getElementById("tabla").tBodies[0];
     var rowCount = table.rows.length;
-    var flotante = document.getElementById("flotante")
-    var eDiv = document.createElement("DIV")
-    var bDiv = document.createElement("DIV")
-    var formulario = document.createElement("FORM")
-    var inputDesc = document.createElement("INPUT")
-    var inputFecha = document.createElement("INPUT")
-    var inputEstado = document.createElement("INPUT")
+    var modal = document.getElementById("modal")
 
-    inputDesc.type = "text"
-    inputFecha.type = "text"
-    inputEstado.type = "text"
+    var inputDesc = document.getElementById("inputDesc")
+    var inputFecha = document.getElementById("inputFecha")
+    var inputEstado = document.getElementById("inputEstado")
     
     for(var i=0; i<rowCount; i++) {
         var row = table.rows[i];
         var chkbox = row.cells[3].getElementsByTagName('input')[0];
-        var botonGuardar = document.createElement("button")
-        var botonCancelar = document.createElement("button")
         
         if(chkbox.checked == true) {
             inputDesc.value = row.cells[0].innerHTML
             inputFecha.value = row.cells[1].innerHTML
             inputEstado.value = row.cells[2].innerHTML
 
-            formulario.appendChild(inputDesc)
-            formulario.appendChild(inputFecha)
-            formulario.appendChild(inputEstado)
-            eDiv.appendChild(formulario)
-            eDiv.classList = "eDiv"
-
-            botonGuardar.innerHTML = "Guardar"
-            botonCancelar.innerHTML = "Cancelar"
-
-            bDiv.appendChild(botonGuardar)
-            bDiv.appendChild(botonCancelar)
-            bDiv.classList = "bDiv"
-            flotante.appendChild(eDiv)
-            flotante.appendChild(bDiv)
-            
-            console.log("Hola")
+            modal.style.display = "block"
             break
         }
     }
 
-    function holis() {
-        row.cells[0].innerHTML = inputDesc.value
-        row.cells[1].innerHTML = inputFecha.value
-        row.cells[2].innerHTML = inputEstado.value
-    }
-    holis()
-    
-    /* Boton guardar deberia ser variable global */
 }
 
+function guardar() {
+    var table = document.getElementById("tabla").tBodies[0];
+    var rowCount = table.rows.length;
+    var modal = document.getElementById("modal")
 
+    var inputDesc = document.getElementById("inputDesc")
+    var inputFecha = document.getElementById("inputFecha")
+    var inputEstado = document.getElementById("inputEstado")
+
+    for(var i=0; i<rowCount; i++) {
+        var row = table.rows[i];
+        var chkbox = row.cells[3].getElementsByTagName('input')[0];
+        
+        if(chkbox.checked == true) {
+            row.cells[0].innerHTML = inputDesc.value
+            row.cells[1].innerHTML = inputFecha.value
+            row.cells[2].innerHTML = inputEstado.value
+
+            chkbox.checked = false
+            break
+        }
+    }
+    modal.style.display = "none"
+}
+
+function cancelar() {
+    var modal = document.getElementById("modal")
+    var table = document.getElementById("tabla").tBodies[0];
+    var rowCount = table.rows.length;
+
+    for(var i=0; i<rowCount; i++) {
+        var row = table.rows[i];
+        var chkbox = row.cells[3].getElementsByTagName('input')[0];
+        
+        if(chkbox.checked == true) {
+            chkbox.checked = false
+            break
+        }
+    }
+
+    modal.style.display = "none"
+}
 
 bEnviar.addEventListener("click" , addDiv)
 bEliminar.addEventListener("click" , eliminarFila)
 bEditar.addEventListener("click" , editarFila)
-botonGuardar.addEventListener("click" , holis)
+btnG.addEventListener("click" , guardar)
+btnC.addEventListener("click" , cancelar)

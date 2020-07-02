@@ -43,7 +43,7 @@ header #tl #titulo {
     left: 20px;
 }
 
-header #seleccionar {
+header .seleccionar {
     font-size: 1rem;
     width: 20%;
     height: 3.7em;
@@ -51,17 +51,17 @@ header #seleccionar {
     float: left;
 }
 
-header #seleccionar #ulSeleccionar {
+header .ulSeleccionar {
     list-style: none;
     width: 100%;
 }
 
-header #seleccionar #ulSeleccionar .liSeleccionar {
+header .liSeleccionar {
     display: inline-block;
     text-align: center;
 }
 
-header #seleccionar #ulSeleccionar .liSeleccionar .links {
+header .links {
     color: #686868;
     font-size: 0.8rem;
     text-decoration: none;
@@ -69,20 +69,27 @@ header #seleccionar #ulSeleccionar .liSeleccionar .links {
     padding: 29px 15px;
 }
 
-header #seleccionar #ulSeleccionar .liSeleccionar .links:hover {
+header .links:hover {
     background-color: #83838330;
     border-bottom: 2px solid #83838301;
 }
 
-header #seleccionar #ulSeleccionar .liSeleccionar #solicitudes {
+header #solicitudes {
     color: #000;
     border-bottom: 2px solid #009673;
 }
 
-header #extra {
+header .salirDiv {
     width: 40%;
+    font-size: 1rem;
     height: 3.7em;
+    text-align: center;
     float: left;
+}
+
+header #salir:hover {
+    color: #000;
+    border-bottom: 2px solid #f44336;
 }
 
 #main {
@@ -111,7 +118,7 @@ header #extra {
 }
 
 #main #opciones {
-    background-color: rgba(34, 34, 58, 0.7);
+    background-color: rgba(34, 34, 58, 0.6);
     position:fixed;
     width: 15%;
     height: 120px;
@@ -253,11 +260,11 @@ tr:nth-child(even) {
 }
 
 #main #cHistorial #tabla #desc {
-    width: 60%;
+    width: 50%;
 }
 
 #main #cHistorial #tabla #fecha {
-    width: 20%;
+    width: 30%;
 }
 
 #main #cHistorial #tabla #estado {
@@ -291,18 +298,135 @@ tr:nth-child(even) {
 }
 
 
-#main #flotante {
-    background-color: lawngreen;
+#main #modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 15%; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4);
+}
+
+#main #modal #modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+#main #modal #modal-content #formModal {
     width: 100%;
+}
+
+#main #modal #modal-content #formModal #form {
+    width: 500px;
     margin: 0 auto;
 }
 
-.eDiv {
-    width: 70%;
-    display: inline-block
+.inputModal {
+    width: 500px;
+    height: 2rem;
+    font-family: inherit;
+    font-size: 0.81rem;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    outline: none;
 }
 
-.bDiv {
-    width: 30%;
+#main #modal #modal-content #botonModal {
     display: inline-block;
+    width: 100%;
+    margin: 20px auto 1px auto;
+}
+
+#main #modal #modal-content #botonModal .btnModal {
+    width: 150px;
+    border-radius: 5px;
+    border: none;
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+}
+
+#main #modal #modal-content #botonModal #btnG {
+    color: white;
+    background-color: #009673;
+    border: 1px solid #009673;
+}
+
+#main #modal #modal-content #botonModal #btnG:hover {
+    background-color: #05765C;
+}
+
+#main #modal #modal-content #botonModal #btnC {
+    background-color: white;
+    color: #00000090;
+}
+
+#main #modal #modal-content #botonModal #btnC:hover {
+    color: #00000090;
+    border: 0.1px solid #00000050;
+}
+
+/*------------------------------------------------------------*/
+
+#inputs {
+    width: 100%;
+}
+
+#formularioUsuario {
+    text-align: center;
+}
+
+.usuarioInput {
+    font-family: inherit;
+    font-size: 0.81rem;
+    width: 49%;
+    margin: 0px auto;
+    padding: 12px 12px 12px 14px;
+    border-radius: 10px;
+    border-style: none;
+    outline: none;
+    resize: none;
+}
+
+#avatarU {
+    width: 10%;
+}
+
+#nombreU {
+    width: 60%;
+}
+
+#activoU {
+    width: 20%;
+}
+
+#selecU {
+    width: 10%;
 }

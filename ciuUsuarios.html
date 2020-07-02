@@ -17,8 +17,8 @@
                 
                 <div class="seleccionar">
                     <ul class="ulSeleccionar">
-                        <li class="liSeleccionar"><a href="ciuSolicitudes.html" class="links" id="solicitudes">Solicitudes</a></li>
-                        <li class="liSeleccionar"><a href="ciuUsuarios.html" class="links" id="usuarios">Usuarios</a></li>
+                        <li class="liSeleccionar"><a href="ciuSolicitudes.html" class="links" id="usuarios">Solicitudes</a></li>
+                        <li class="liSeleccionar"><a href="ciuUsuarios.html" class="links" id="solicitudes">Usuarios</a></li>
                     </ul>
                 </div>  
 
@@ -58,7 +58,14 @@
                 </aside>
 
                 <div id="post">
-                    <textarea name="postTextArea" placeholder="Escribe tu consulta aquí..." onfocus="this.value=''"></textarea>
+                    <div id="inputs">
+                        <form id="formularioUsuario">
+                            <input type="text" name="nombre" placeholder="Nombre" class="usuarioInput" id="formNombre">
+                            <input type="password" name="contraseña" placeholder="Contraseña" class="usuarioInput" id="formContraseña">
+                            <input type="email" name="email" placeholder="Email" class="usuarioInput" id="formEmail">
+                            <input type="date" name="fecha" class="usuarioInput" id="formFecha">
+                        </form>
+                    </div>
                     <hr>
                     <div id="botones">
                         <button class="btn" id="bEnviar">
@@ -80,10 +87,10 @@
                     <table id="tabla">
                         <thead>
                             <tr>
-                                <th id="desc">Descipción</th>
-                                <th id="fecha">Fecha</th>
-                                <th id="estado">Estado</th>
-                                <th id="selec"></th>
+                                <th id="avatarU"></th>
+                                <th id="nombreU">Nombre</th>
+                                <th id="activoU">Activo</th>
+                                <th id="selecU"></th>
                             </tr>
                         </thead>
                         <tbody id="res">
@@ -96,9 +103,11 @@
                     <div id="modal-content">
                         <div id="formModal">
                             <form id="form">
-                                <input type="text" name="descripcion" id="inputDesc" class="inputModal"><br>
-                                <input type="date" name="fecha" id="inputFecha" class="inputModal"><br>
-                                <input type="text" name="estado" id="inputEstado" class="inputModal">
+                                <input type="text" name="nombreModal" id="inputNombre" class="inputModal"><br>
+                                <input type="text" name="contraseñaModal" id="inputContraseña" class="inputModal"><br>
+                                <input type="text" name="emailModal" id="inputEmail" class="inputModal">
+                                <input type="date" name="fechaModal" id="inputFecha" class="inputModal">
+                                <input type="text" name="estadoModal" id="inputEstado" class="inputModal">
                             </form>
                         </div>
                         <div id="botonModal">
@@ -111,6 +120,6 @@
 
         </div>
         
-        <script src="js/ciuSolicitudes.js"></script>
+        <script src="js/ciuUsuarios.js"></script>
     </body>
 </html>
